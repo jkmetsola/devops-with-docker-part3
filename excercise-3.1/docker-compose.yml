@@ -7,7 +7,7 @@ services:
       - "com.centurylinklabs.watchtower.enable=true"
     restart: always
     ports:
-      - '3000:3000'
+      - 8080:8080
 
   watchtower:
     image: containrrr/watchtower
