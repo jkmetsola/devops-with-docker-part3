@@ -1,0 +1,19 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.2
+
+      - name: Build, Push and Deploy to Heroku
+        id: heroku
+        uses: mtsmachado8/heroku-deploy@v1.0.0 # use the latest version of the action
+        with:
+          email: ${{ secrets.HEROKU_EMAIL }} # your Heroku email
+          api_key: ${{ secrets.HEROKU_API_KEY }} # your Heroku API key
+          app_name: ${{ secrets.HEROKU_APP_NAME }} # your application name
+          dockerfile: "./excercise-3.2" # OPTIONAL: set the path to the folder where the Dockerfile is located, the default is the rootDir
