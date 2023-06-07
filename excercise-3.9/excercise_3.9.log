@@ -1,0 +1,12 @@
+# docker image ls --format='{{json .}}'
+
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part3 (main) $ docker image ls --format 'table {{.Repository}}\t{{.VirtualSize}}'
+REPOSITORY                     SIZE
+excercise-3.9/excercise_1.13   18.04MB
+excercise-3.8/excercise_1.12   130.4MB
+excercise-3.7/excercise_1.12   469.8MB
+excercise-3.7/excercise_1.13   449.1MB
+excercise-3.6/excercise_1.13   1.067GB
+excercise-3.6/excercise_1.12   1.261GB
+excercise-3.5/excercise_1.13   1.069GB
+excercise-3.5/excercise_1.12   1.264GB
