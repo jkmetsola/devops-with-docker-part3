@@ -1,0 +1,22 @@
+Optimized almost 900MB by just switching the base image.
+
+(venv) jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part3 (main) $ docker image ls | grep 2.11
+excercise-3.10/excercise_2.11   latest    09708cb9f5d5   2 hours ago   68MB
+excercise_2.11                  latest    876e22da22ce   11 days ago   936MB
+
+Earlier version:
+    FROM python:3.11-bullseye
+
+    RUN pip install robotframework
+    COPY ./hello.robot hello.robot
+
+Current version:
+    FROM python:3.11-alpine3.18
+
+    RUN pip install robotframework
+    COPY ./hello.robot hello.robot
+
+    EXPOSE 5678
+
+Still wondering if it'd be possible to use VSCode breakpointing with dockerized 
+robot framework... Tried to do some research about this but no luck...

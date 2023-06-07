@@ -1,0 +1,12 @@
+Very simple implementation to run containerized robot framework test script.
+Using launch.json and tasks.json, one is able to set entry point for docker container 
+and run application.
+
+However, I don't see this way of executing that beneficial because most of the debug features 
+cannot be used with containerization (for example break pointing). This way of executing
+would be really nice but because I couldn't find any info how to stop at breakpoint
+when using docker container, I don't see value doing docker containerization 
+when debugging with VSCode.
+
+https://code.visualstudio.com/docs/containers/debug-common
+https://code.visualstudio.com/docs/containers/debug-python
