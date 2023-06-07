@@ -1,0 +1,7 @@
+Seems that image that I used was based on Debian based linux distribution.
+
+Frontend (Debian 10):
+https://hub.docker.com/layers/library/node/16/images/sha256-6f77ef701fd20c0929642e8cef71db851c717d0ca65de786f7c3fd3240a63d30?context=explore
+
+Backend (Debian 11):
+https://hub.docker.com/layers/library/golang/1.16/images/sha256-8da77ed09ebe25cd79ce03092e009f3c13d684c827f61ca5236a2df26d387a55?context=explore
