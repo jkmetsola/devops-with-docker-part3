@@ -1,0 +1,14 @@
+services:
+  # base-image:
+  #   build:
+  #     dockerfile: "./Dockerfile"      
+  #   image: "${IMAGE_NAME}"
+  base-image-publisher:
+    build:
+      dockerfile: "./Dockerfile.build"
+    image: "${IMAGE_NAME}-publisher"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # depends_on:
+    #   - base-image
+    # command: sh /builder.sh ${IMAGE_NAME}

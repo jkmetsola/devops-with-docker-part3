@@ -1,0 +1,7 @@
+FROM docker
+
+COPY ./DOCKER_SECRET.txt /DOCKER_SECRET.txt
+COPY ./builder.sh /builder.sh
+COPY ./Dockerfile /Dockerfile
+
+CMD sh /builder.sh ${IMAGE_NAME}

@@ -1,0 +1,10 @@
+Preconditions:
+- personal docker API token is defined to "excercise-3.4/DOCKER_SECRET.txt"
+- personal repository/image_name is defined to "excercise-3.4/.env" file.
+    - for example "IMAGE_NAME=jkmetsola/excercise-3.4"
+
+
+'excercise-3.4/Dockerfile' can be published using following command:
+
+docker compose -f excercise-3.4/docker-compose.build.yaml up
+
